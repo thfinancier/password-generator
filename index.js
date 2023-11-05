@@ -1,4 +1,5 @@
 const { Command } = require('commander')
+const createPassword = require('./utils/createPassword')
 const program = new Command()
 
 program.version('1.0.0').description('Simple Password Generator')
@@ -12,3 +13,8 @@ program
     .parse()
 
 const { length, save, numbers, symbols } = program.opts()
+
+// Get generated password
+const generatedPassword = createPassword(length, numbers, symbols)
+
+console.log(generatedPassword)
