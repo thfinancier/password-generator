@@ -2,7 +2,7 @@ const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const numbers = '0123456789'
 const symbols = '!@#$%^&*_-+='
 
-function createPassword(length = 8, hasNumbers = true, hasSymbols = true) {
+export default function createPassword(length = 8, hasNumbers = true, hasSymbols = true) {
     let chars = alphabet
     let password = ''
 
@@ -15,5 +15,3 @@ function createPassword(length = 8, hasNumbers = true, hasSymbols = true) {
 
     return password
 }
-
-module.exports = createPassword
